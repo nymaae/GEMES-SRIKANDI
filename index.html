@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEMES SRIKANDI</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: #f6f7fb;
+        }
+
+        /* KONTEN UTAMA */
+        .faqSRIKANDI {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 35px;
+            padding: 40px 20px;
+        }
+
+        .header_gemes {
+            width: 100%;
+            max-width: 700px;
+            height: 200px;
+            margin: 0 auto; 
+            overflow: hidden;
+            border-radius: 24px;
+            background: linear-gradient(135deg, #ffffff, #f1f1f1);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+            position: relative;
+        }
+
+        .header_img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #ffffff;       
+            object-position: center;
+        }
+
+        .header_gemes::after {
+            content: "";
+            position: absolute;
+            bottom: -22px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 420px;
+            height: 3px;
+            background: linear-gradient(
+                to right,
+                transparent,
+                 rgba(47, 58, 74, 0.35),
+                 #2F3A4A,
+                 rgba(47, 58, 74, 0.35),
+                transparent
+            );
+            filter: blur(0.6px);
+        }
+
+        .header_gemes::before {
+            content: "";
+            position: absolute;
+            bottom: -24px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 520px;
+            height: 8px;
+            background: linear-gradient(
+                to right,
+                transparent,
+                 rgba(47, 58, 74, 0.15),
+                 rgba(47, 58, 74, 0.25),
+                 rgba(47, 58, 74, 0.15),
+                transparent
+            );
+            filter: blur(6px);
+        }
+
+        .kiri {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .deskripsi {
+            max-width: 680px;
+            text-align: center;
+            font-size: 16px;
+            color: #7A8290;
+            line-height: 1.7;
+        }
+
+        .video_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 100%;
+            align-items: center;
+        }
+
+        video {
+            width: 520px;
+            max-width: 100%;
+            border-radius: 22px;
+            box-shadow: 0 16px 35px rgba(0, 0, 0, 0.18);
+            background: #000;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        video:hover {
+            transform: scale(1.03);
+            box-shadow: 0 24px 50px rgba(0, 0, 0, 0.28);
+        }
+
+        @media (max-width: 768px) {
+            .header_gemes {
+                height: 180px;
+            }
+
+            .gemes,
+            .srikandi {
+                font-size: 42px;
+            }
+        }
+
+        :root {
+            --dpk-blue: #3F7DE0;
+            --dpk-blue-hover: #2F65C6;
+        }
+
+        .home_icon {
+            position: fixed;
+            bottom: 28px;
+            left: 24px;
+            z-index: 9999;
+            width: 48px;
+            height: 48px;
+            background: var(--dpk-blue);  
+            color: #ffffff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 10px 25px rgba(63, 125, 224, 0.35);
+            border: 2px solid #ffffff;
+            transition: all 0.25s ease;
+        }
+
+        .home_icon:hover {
+            background: var(--dpk-blue-hover);
+            transform: translateY(-4px) scale(1.06);
+            box-shadow: 0 14px 30px rgba(63, 125, 224, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .home_icon {
+                width: 42px;
+                height: 42px;
+                bottom: 16px;
+                left: 16px;
+            }
+
+            .home_icon svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        /* FOOTER */
+        .dpk-footer{
+            width:100%;
+            background:#3F7DE0;
+            color:#ffffff;
+        }
+
+        .footer-inner{
+            max-width:1100px;         
+            margin:0 auto;
+            padding:48px 80px 24px;    
+        }
+
+        .footer-grid{
+            display:grid;
+            grid-template-columns: 2.2fr 2fr 1.6fr;
+            gap:40px;
+        }
+
+        .footer-grid h3{
+            font-size:20px;
+            font-weight:600;
+            margin-bottom:14px;
+            line-height: 1.4;
+            color:#fff;
+        }
+
+        .footer-grid h4{
+            font-size:15px;
+            font-weight:600;
+            margin-bottom:8px;
+            color:#fff;
+        }
+
+        .footer-grid p{
+            font-size:13px;
+            line-height:1.6;
+            margin:0;
+            opacity:0.95;
+            color:#fff;
+        }
+
+        /* MAP */
+        .footer-map iframe{
+            width:100% !important;
+            height:120px !important;
+            border:none !important;
+            border-radius:0px !important;
+            box-shadow:none !important;
+        }
+
+        /* SOSIAL */
+        .footer-social{
+            display:flex;
+            gap:16px;
+            align-items:center;
+        }
+
+        .footer-social a{
+            color:#ffffff;
+            opacity:0.95; 
+            font-size:18px;
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            line-height:1;
+            transition: all .2s ease;
+            text-decoration: none;
+        }
+
+        .footer-social a:hover{
+            opacity:1;
+            transform: translateY(-1px);
+        }
+
+        .footer-social i{
+            font-size:20px;      
+            stroke-width:2.3;   
+        }
+
+        .footer-bottom{
+            margin-top:40px;
+            padding-top:18px;
+            padding-bottom:6px;
+            border-top:1px solid rgba(255,255,255,0.25);
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            font-size:13px;
+            opacity:0.9;
+        }
+ 
+        /* RESPONSIVE */
+        @media(max-width:1024px){
+            .footer-inner{
+                padding:40px 24px 24px;
+                }
+            }
+
+        @media(max-width:768px){
+            .footer-grid{
+                grid-template-columns:1fr;
+                gap:32px;
+            }
+
+            .footer-bottom{
+                flex-direction:column;
+                gap:12px;
+                text-align:center;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <a href="https://dpk.bontangkota.go.id" class="home_icon" title="Home">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 3.293l6 6V14a1 1 0 0 1-1 1h-3v-4H6v4H3a1 1 0 0 1-1-1V9.293l6-6z"/>
+            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l7 7-1.414 1.414L8 3.914 1.707 9.414.293 8l7-7z"/>
+        </svg>
+    </a>
+
+    <div class="faqSRIKANDI">
+        <div class="header_gemes">
+            <img src="GEMES.png" alt="Header GEMES SRIKANDI" class="header_img">
+        </div>
+
+        <p class="deskripsi">
+            Kumpulan FAQ untuk membantu pengguna memahami dan menyelesaikan
+            kendala dalam penggunaan layanan SRIKANDI.
+        </p>
+
+        <div class="video_wrapper">
+            <video src="FAQ SRIKANDI.mp4" controls></video>
+            <video src="FAQ SRIKANDI (1).mp4" controls></video>
+            <video src="FAQ SRIKANDI (2).mp4" controls></video>
+            <video src="FAQ SRIKANDI (3).mp4" controls></video>
+            <video src="FAQ SRIKANDI (4).mp4" controls></video>
+            <video src="FAQ SRIKANDI (5).mp4" controls></video>
+            <video src="FAQ SRIKANDI (6).mp4" controls></video>
+            <video src="FAQ SRIKANDI (7).mp4" controls></video>
+            <video src="FAQ SRIKANDI (8).mp4" controls></video>
+            <video src="FAQ SRIKANDI (9).mp4" controls></video>
+            <video src="FAQ SRIKANDI (10).mp4" controls></video>
+            <video src="FAQ SRIKANDI (11).mp4" controls></video>
+            <video src="FAQ SRIKANDI (12).mp4" controls></video>
+        </div>
+    </div>
+
+    <footer class="dpk-footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+
+                <!-- KIRI -->
+                <div>
+                  <h3>Dinas Perpustakaan dan Kearsipan Kota Bontang</h3>
+                  <p>
+                    Dinas Perpustakaan dan Kearsipan Kota Bontang<br>
+                    menyediakan layanan literasi, perpustakaan,<br>
+                    peminjaman buku, pengelolaan arsip, serta<br>
+                    informasi program pendidikan literasi bagi<br>
+                    masyarakat.
+                  </p>
+                </div>
+
+                <!-- TENGAH -->
+                <div>
+                  <h4>Kontak Info</h4>
+                  <p>
+                    Gedung Dinas Perpustakaan dan<br>
+                    Kearsipan, Jl. HM. Ardans No. 1,<br>
+                    Kelurahan Satimpo, Kecamatan<br>
+                    Bontang Selatan, Kota Bontang,<br>
+                    Kalimantan Timur 75324.
+                  </p>
+                  <br>
+                  <p>
+                    0821-4848-4996 : PPID DPK<br>
+                    0822-4989-6919 : Call Center Perpustakaan<br>
+                    dpkbontangkota@gmail.com
+                  </p>
+                </div>
+
+                <!-- KANAN -->
+                <div class="footer-map">
+                  <h4>Lokasi Kami</h4>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8084940979097!2d117.47320997496467!3d0.12716129987159108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x320a0df343780f2b%3A0xf983ef9fd2e7c2a5!2sDinas%20Perpustakaan%20dan%20Kearsipan%20Kota%20Bontang!5e0!3m2!1sid!2sid!4v1767859107375"
+                    loading="lazy">
+                  </iframe>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Dinas Perpustakaan dan Kearsipan Kota Bontang. All rights reserved.</span>
+
+                <div class="footer-social">
+                  <a href="https://www.youtube.com/@PPIDDPKBontang" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                  <a href="https://www.tiktok.com/@ppid.dpk.bontang" target="_blank">
+                    <i class="fa-brands fa-tiktok"></i>
+                  </a>
+                  <a href="https://www.facebook.com/ppiddpkbontang" target="_blank">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="https://www.instagram.com/ppid.dpk.bontang/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                  <a href="https://twitter.com/ppiddpkbontang" target="_blank">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
